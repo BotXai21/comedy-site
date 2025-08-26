@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedian Portfolio</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        .container {
+            max-width: 1280px;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold text-yellow-400">Funny Guy</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+                <a href="#shows" class="hover:text-yellow-400 transition duration-300">Shows</a>
+                <a href="#clips" class="hover:text-yellow-400 transition duration-300">Clips</a>
+                <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-yellow-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 p-4">
+            <a href="#about" class="block py-2 px-4 hover:bg-gray-700 rounded-lg">About</a>
+            <a href="#shows" class="block py-2 px-4 hover:bg-gray-700 rounded-lg">Shows</a>
+            <a href="#clips" class="block py-2 px-4 hover:bg-gray-700 rounded-lg">Clips</a>
+            <a href="#contact" class="block py-2 px-4 hover:bg-gray-700 rounded-lg">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden py-16 md:py-24 lg:py-32 bg-gray-900">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:justify-center text-center md:text-left gap-10">
+            <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-yellow-400 transition-transform transform hover:scale-105 duration-300">
+                <img src="https://placehold.co/500x500/333333/ffffff?text=Comedian" alt="Comedian Profile Picture" class="w-full h-full object-cover">
+            </div>
+            <div class="max-w-xl">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+                    Hello, my name is <br><span class="text-yellow-400">Chris Laughs-A-Lot</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-6">
+                    Professional jokester and part-time philosopher. I make people laugh for a living.
+                </p>
+                <a href="#contact" class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
+                    Book a Show
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About Me</h2>
+            <div class="max-w-3xl mx-auto bg-gray-700 rounded-xl shadow-2xl p-8">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Ever since I was a kid, I've had a knack for finding the humor in life's most awkward moments. My comedy is a blend of observational humor, witty one-liners, and a healthy dose of self-deprecation. I've performed in comedy clubs across the country, opened for some of the biggest names in the business, and once, I even made my grandmother laugh so hard she snorted milk through her nose. It was glorious.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-10">Upcoming Shows</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Show Card 1 -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition-transform transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">The Laugh Factory</h3>
+                    <p class="text-gray-300 mb-1">Los Angeles, CA</p>
+                    <p class="text-gray-400 mb-4">October 26, 2025</p>
+                    <a href="#" class="inline-block bg-yellow-400 text-gray-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors duration-300">Get Tickets</a>
+                </div>
+                <!-- Show Card 2 -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition-transform transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Comedy Cellar</h3>
+                    <p class="text-gray-300 mb-1">New York, NY</p>
+                    <p class="text-gray-400 mb-4">November 10, 2025</p>
+                    <a href="#" class="inline-block bg-yellow-400 text-gray-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors duration-300">Get Tickets</a>
+                </div>
+                <!-- Show Card 3 -->
+                <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition-transform transform hover:scale-105 duration-300">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Zanies Comedy Club</h3>
+                    <p class="text-gray-300 mb-1">Chicago, IL</p>
+                    <p class="text-gray-400 mb-4">December 5, 2025</p>
+                    <a href="#" class="inline-block bg-yellow-400 text-gray-900 font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors duration-300">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clips Section -->
+    <section id="clips" class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-10">Comedy Clips</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Video Clip 1 -->
+                <div class="aspect-w-16 aspect-h-9 w-full bg-gray-700 rounded-xl overflow-hidden shadow-2xl transition-transform transform hover:scale-105 duration-300">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Video Clip 2 -->
+                <div class="aspect-w-16 aspect-h-9 w-full bg-gray-700 rounded-xl overflow-hidden shadow-2xl transition-transform transform hover:scale-105 duration-300">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/o-YV95gK1eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Get in Touch</h2>
+            <p class="text-lg text-gray-300 mb-8">
+                For booking inquiries or just to say hello, you can reach out via social media or email.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <!-- Social Media Links -->
+                <a href="#" target="_blank" class="bg-gray-800 text-white rounded-full p-4 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 0h-9a4.5 4.5 0 00-4.5 4.5v9a4.5 4.5 0 004.5 4.5h9a4.5 4.5 0 004.5-4.5v-9a4.5 4.5 0 00-4.5-4.5zm2.75 4.5a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"></path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="bg-gray-800 text-white rounded-full p-4 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.66 8.59c-.21.093-.438.16-.67.214.24-.14.426-.356.516-.605-.224.133-.474.22-.738.27-.21-.22-.505-.355-.83-.355-1.07 0-1.94 1.05-1.94 2.35 0 .18.02.35.06.51-.55-.03-1.09-.27-1.44-.64-.474.7-.66 1.13-.7 1.58-.2.24-.3.5-.3.79 0 .54.27 1.02.68 1.3-.23-.01-.46-.07-.66-.18-.01.6.36 1.1.92 1.25.14.04.28.06.43.06.1 0 .2-.01.29-.03.24.58.74 1.02 1.3 1.02-.45.36-1.02.66-1.63.66-.11 0-.22-.01-.33-.02.64.44 1.38.7 2.18.7 2.62 0 4.54-2.3 4.54-5.26 0-.08-.01-.16-.01-.24.3-.24.57-.52.78-.85z"></path>
+                    </svg>
+                </a>
+                <a href="mailto:funnyguy@example.com" class="bg-gray-800 text-white rounded-full p-4 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 4H3a2 2 0 00-2 2v12a2 2 0 002 2h18a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-9 6-9-6v-.01L21 6z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6 text-center text-gray-400">
+        <p class="text-sm">&copy; 2025 Chris Laughs-A-Lot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
